@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "SanPham";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+@using QuanLyMyPham.Models;
+@model List<SanPham>
+
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+
+
+<section class="u-align-center u-clearfix u-section-1" id="sec-f22f">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Danh sách sản phẩm</h2>
+        <a href="/QuanLy/ThemSP" style="margin-left:1015px; margin-top:-40px;" class="u-border-none u-border-radius-50 u-btn u-button-style u-hover-palette-2-base u-text-hover-palette-3-base u-btn-1" target="_blank">Create New</a>
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+            <table class="u-table-entity u-table-entity-1">
+                <colgroup>
+                    <col width="6.6%">
+                    <col width="21.3%">
+                    <col width="14.9%">
+                    <col width="26.3%">
+                    <col width="12%">
+                    <col width="19%">
+                </colgroup>
+                <thead class="u-align-center u-palette-1-light-2 u-table-header u-text-palette-3-base u-table-header-1">
+                    <tr style="height: 36px;">
+                        <th class="u-align-center u-border-1 u-border-grey-30 u-table-cell">ID</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-2">Tên sản phẩm</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-3">Hình ảnh</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-4">Mô tả</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-5">loại</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-6">tuỳ chọn</th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tbody class="u-align-center u-table-body">
+                        <tr style="height: 50px;">
+                            <td class="u-align-center u-border-1 u-border-grey-30 u-first-column u-table-cell">@item.MaSP</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-8">@item.TenSP</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-9">
+                                <img src="/HinhAnh/@item.DuongDan" width="100"/>
+                            </td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-10">
+                                @Truncate(@item.MoTa, 50)
+                            </td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-11">@item.Loai.TenLoai</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-12">
+                                <a href="/QuanLy/SuaSP/@item.MaSP" class="u-border-none u-border-radius-50 u-btn u-button-style u-hover-palette-2-base u-text-hover-palette-3-base u-btn-1" target="_blank">update</a>
+                                <a href="/QuanLy/XoaSP/@item.MaSP" class="u-border-none u-border-radius-50 u-btn u-button-style u-hover-palette-2-base u-text-hover-palette-3-base u-btn-1" target="_blank">delete</a>
+                              
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+                
+            </table>
+        </div>
+    </div>
+</section>

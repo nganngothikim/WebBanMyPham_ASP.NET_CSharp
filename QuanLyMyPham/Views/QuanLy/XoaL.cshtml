@@ -1,0 +1,36 @@
+﻿@model QuanLyMyPham.Models.Loai
+
+@{
+    ViewBag.Title = "XoaL";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+<div class="container">
+    <div class="row u-align-left u-form u-form-1">
+        <br />
+        <fieldset>
+
+            <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Xoá Loại Sản Phẩm </h2>
+
+            <div class="display-label">
+                @*@Html.DisplayNameFor(model => model.TenSP)*@
+                Mã loại: @Html.DisplayFor(model => model.MaLoai)
+            </div>
+            <br />
+            <div class="display-label">
+                @*@Html.DisplayNameFor(model => model.TenSP)*@
+                Tên loại: @Html.DisplayFor(model => model.TenLoai)
+            </div>
+            <br />
+            <h4>Bạn có chắc chắn muốn xóa?</h4>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <p>
+                    <button class="u-btn u-btn-1" type="submit" value="Delete" style="margin-top:20px;">Xóa</button>
+                </p>
+            }
+        </fieldset>
+
+    </div>
+
+</div>

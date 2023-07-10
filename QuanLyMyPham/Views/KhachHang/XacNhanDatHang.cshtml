@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "XacNhanDatHang";
+    Layout = "~/Views/Shared/_LayoutKhachHang.cshtml";
+}
+<link rel="stylesheet" href="/Content/Noti.css" media="screen">
+@using QuanLyMyPham.Models
+@model KhachHang
+@*@{KhachHang kh = (KhachHang)Session["kh"];}*@
+<link href="~/Content/SignUp.css" rel="stylesheet" />
+<section class="u-clearfix u-section-1" id="carousel_f9c5" style="margin-top:100px;">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-align-center u-container-style u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
+                                <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-palette-1-light-1 u-text-1">Xác nhận</h2>
+                                <p class="u-text u-text-palette-3-dark-2 u-text-2"> Điền thông tin để chúng tôi xác nhận đơn hàng của bạn của bạn!</p>
+                                <p class="u-text u-text-palette-3-dark-2 u-text-3">Quay lại để tiếp tục mua sắm?</p>
+                                <p class="u-text u-text-palette-3-dark-2 u-text-4">
+                                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="/KhachHang/XemGioHang" target="_blank">Quay lại giỏ hàng</a>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2">
+                            <div class="u-align-left u-form u-form-1">
+                                <form action="/KhachHang/XacNhanDatHang" method="post">
+                                    <div class="u-form-group u-form-name u-label-top">
+                                        <label for="name-6797" class="u-label">Tên khách hàng</label>
+                                        <input value="@Model.HoTen" type="text" id="name-6797" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+                                    </div>
+                                    <div class="u-form-email u-form-group u-label-top">
+                                        <label for="email-6797" class="u-label">Địa chỉ nhận hàng</label>
+                                        <input type="text" id="email-6797" name="dchi" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+                                    </div>
+                                    <div class="u-form-group u-label-top">
+                                        <label for="text-90de" class="u-label">Số điện thoại</label>
+                                        <input value="@Model.DienThoai" type="text" id="text-90de" name="sdt" class="u-border-1 u-border-grey-30 u-input u-input-rectangle">
+                                    </div>
+                                    <div class="u-form-date u-form-group u-label-top u-form-group-4">
+                                        <label for="date-b407" class="u-label">Chọn ngày giao hàng</label>
+                                        <input type="date" placeholder="MM/DD/YYYY" id="date-b407" name="date" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+                                    </div>
+                                    <div class="u-align-left u-form-group u-form-submit u-label-top">
+                                        <input type="submit" value="submit" class="u-form-control-hidden">
+                                        <a href="#" class="u-active-black u-border-none u-btn u-btn-submit u-button-style u-hover-palette-3-light-1 u-palette-1-light-1 u-text-hover-white u-btn-2">
+                                            XÁC NHẬN<br>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+﻿@using QuanLyMyPham.Models;
+@model List<Loai>
+
+
+@foreach (var item in Model)
+{
+    <li class="u-nav-item">
+        <a class="u-button-style u-hover-palette-2-light-2 u-nav-link u-palette-1-light-3" href="/QuanLy/HTSP_TheoLoai/@item.MaLoai">@item.TenLoai</a>
+    </li>
+}

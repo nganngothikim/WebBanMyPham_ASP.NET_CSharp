@@ -1,0 +1,99 @@
+﻿@{
+    ViewBag.Title = "XemGioHang";
+    Layout = "~/Views/Shared/_LayoutKhachHang.cshtml";
+
+    var nfi = new System.Globalization.NumberFormatInfo { NumberGroupSeparator = "." };
+    var ListSize = new List<SelectListItem>();
+    for (int j = 35; j <= 46; j++)
+    {
+        var y = new SelectListItem
+        {
+            Text = j.ToString(),
+            Value = j.ToString()
+        };
+        ListSize.Add(y);
+    }
+}
+@using QuanLyMyPham.Models;
+@model List<Item>
+<link rel="stylesheet" href="/ConTent/Cart.css" media="screen">
+
+<section class="u-clearfix u-white u-section-1" id="sec-be03" style="margin-top:100px;">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-font u-text-palette-2-base u-text-1">Giỏ hàng của bạn</h1>
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+            <table class="u-table-entity">
+                <colgroup>
+                    <col width="20.5%">
+                    <col width="19.1%">
+                    <col width="18.1%">
+                    <col width="14%">
+                    <col width="17.4%">
+                    <col width="10.9%">
+                </colgroup>
+                <thead class="u-align-center u-palette-1-light-2 u-table-header u-text-palette-3-dark-3 u-table-header-1">
+                    <tr style="height: 69px;">
+                        <th class="u-border-1 u-border-white u-table-cell">Sản phẩm</th>
+                        <th class="u-border-1 u-border-white u-table-cell">Hình ảnh</th>
+                        <th class="u-border-1 u-border-white u-table-cell">Giá</th>
+                        <th class="u-border-1 u-border-white u-table-cell">Số lượng</th>
+                        <th class="u-border-1 u-border-white u-table-cell">Thành tiền</th>
+                        <th class="u-border-1 u-border-white u-table-cell"></th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tbody class="u-align-center u-table-body">
+                        <tr style="height: 75px;">
+                            <td class="u-border-1 u-border-palette-1-light-3 u-table-cell">@item.tenSP</td>
+                            <td class="u-border-1 u-border-palette-1-light-3 u-table-cell"><img src="/HinhAnh/@item.anhBia" style="width:100px;" /></td>
+                            <td class="u-border-1 u-border-palette-1-light-3 u-table-cell">@item.donGia</td>
+                            <td class="u-border-1 u-border-palette-1-light-3 u-table-cell">
+                                <form action="/KhachHang/SuaSoLuong" method="get">
+                                    <input type="hidden" name="SanPhamID" value="@item.maSP" />
+                                    <input type="number" min="1" step="1" name="soluongmoi" value="@item.soLuong" style="width:40px;" />
+                                    <span><button type="submit" class="u-btn btn-sm"> Cập nhật </button></span>
+                                </form>
+                            </td>
+                            <td class="u-border-1 u-border-palette-1-light-3 u-table-cell">@item.thanhTien</td>
+                            <td class="u-border-1 u-border-palette-1-light-3 u-table-cell">
+                                <a href="/KhachHang/Xoa/@item.maSP" class="u-btn btn-sm">Xóa</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+
+            </table>
+        </div>
+        @{GioHang1 gio = Session["gh"] as GioHang1;}
+        <div class="u-expanded-width-xs u-table u-table-responsive u-table-2">
+            <span style="height:40px">
+                <table class="u-table-entity">
+                    <colgroup>
+                        <col width="42.8%">
+                        <col width="57.2%">
+                    </colgroup>
+                    <tbody class="u-table-body">
+                        <tr>
+                            <td class="u-first-column u-table-cell u-text-palette-3-dark-2 u-table-cell-13">Tổng thanh toán</td>
+                            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-text-palette-3-dark-2 u-white u-table-cell-14">
+                                @{
+                                    if (gio == null)
+                                    {
+                                        <span>0</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@gio.TongTien() VNĐ</span>
+                                    }
+                                }
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </span>
+        </div>
+        <a href="/KhachHang/SanPham" class="u-border-2 u-border-grey-75 u-btn u-button-style u-hover-palette-3-light-1 u-palette-2-base u-text-white u-btn-1">Sản Phẩm</a>
+        <a href="/KhachHang/XacNhanDatHang" class="u-border-2 u-border-grey-75 u-btn u-button-style u-hover-palette-3-light-1 u-palette-2-base u-text-white u-btn-2">Đặt hàng</a>
+    </div>
+</section>

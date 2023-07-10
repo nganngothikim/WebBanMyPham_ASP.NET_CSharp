@@ -1,0 +1,29 @@
+﻿@model QuanLyMyPham.Models.Loai
+
+@{
+    ViewBag.Title = "ThemL";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+<link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/nicepage.css" rel="stylesheet" />
+<br />
+<div class="container">
+    <div class="row u-align-left u-form u-form-1">
+        <form method="post" action="/QuanLy/ThemL" enctype="multipart/form-data">
+            <fieldset>
+                <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Thêm Loại Mới</h2>
+                <div class="editor-label">
+                    Tên loại
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.TenLoai)
+                    @Html.ValidationMessageFor(model => model.TenLoai)
+                </div>
+
+                <p>
+                    <button class="u-btn u-btn-1" type="submit" value="Create" style="margin-top:20px;">Thêm</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</div>

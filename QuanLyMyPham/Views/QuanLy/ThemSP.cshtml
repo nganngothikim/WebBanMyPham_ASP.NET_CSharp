@@ -1,0 +1,59 @@
+﻿@model QuanLyMyPham.Models.SanPham
+
+@{
+    ViewBag.Title = "ThemSP";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+<link href="~/Content/nicepage.css" rel="stylesheet" />
+<link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <div class="row u-align-left u-form u-form-1">
+        <form method="post" action="/QuanLy/ThemSP" enctype="multipart/form-data">
+            <fieldset>
+                <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Thêm Sản Phẩm Mới</h2>
+                <div class="editor-label">
+                    Tên sản phẩm
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.TenSP)
+                    @Html.ValidationMessageFor(model => model.TenSP)
+                </div>
+                <br />
+                <div class="editor-label">
+                    Hình ảnh
+                </div>
+                <div class="editor-field">
+                    <input class="form-control form-control-sm" name="fileUpload" type="file" placeholder="Chọn tệp" style="width:90%;">
+                </div>
+                <br />
+                <div class="editor-label">
+                    Giá
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.Gia)
+                    @Html.ValidationMessageFor(model => model.Gia)
+                </div>
+                <br />
+                <div class="editor-label">
+                    Mô tả
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.MoTa)
+                    @Html.ValidationMessageFor(model => model.MoTa)
+                </div>
+                <br />
+                <div class="editor-label">
+                    Mã loại
+                </div>
+                <div class="editor-field">
+                    @Html.DropDownList("MaLoai")
+                </div>
+
+                <p>
+                    <button class="u-btn u-btn-1" type="submit" value="Create" style="margin-top:20px;">Thêm</button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "HoaDon";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+@using QuanLyMyPham.Models;
+@model List<HoaDon>
+
+<section class="u-align-center u-clearfix u-section-1" id="sec-f22f">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Quản lý đơn hàng</h2>
+        @*<a href="" style="margin-left:1015px; margin-top:-40px;" class="u-border-none u-border-radius-50 u-btn u-button-style u-hover-palette-2-base u-text-hover-palette-3-base u-btn-1" target="_blank">Create New</a>*@
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+            <table class="u-table-entity u-table-entity-1">
+                <colgroup>
+                    <col width="4.9%">
+                    <col width="25.099999999999989%">                 
+                    <col width="10.5%">
+                    <col width="11%">
+                    <col width="23.9%">
+                    <col width="17.4%">
+                    <col width="12.1%">
+                    @*<col width="13.099999999999989%">*@
+                </colgroup>
+                <thead class="u-align-center u-palette-1-light-2 u-table-header u-text-palette-3-base u-table-header-1">
+                    <tr style="height: 53px;">
+                        <th class="u-align-center u-border-1 u-border-grey-30 u-table-cell">ID</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-2">Khách hàng</th>                        
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-4">Ngày lập</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-5">Ngày hẹn giao</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-6">Chi tiết đơn</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-7">Tổng</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-3">Tình trạng</th>
+                        @*<th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-8">Tuỳ chọn</th>*@
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tbody class="u-align-center u-table-body">
+                        <tr style="height: 47px;">
+                            <td class="u-align-center u-border-1 u-border-grey-30 u-first-column u-table-cell">@item.MaHoaDon</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-10">@item.KhachHang.HoTen</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-12">@item.NgayHoaDon</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-13">@item.NgayGiao</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-14">
+                                @Html.Action("ChiTietHD_MaHoaDon", "QuanLy", new { id = item.MaHoaDon })
+                            </td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-15">@item.ThanhTien @item.ThanhTien.Value.ToString("#,##")</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-11">
+                                @if (item.NgayThanhToan != null)
+                                {
+                                    <input type="checkbox" disabled checked /><label>Đã giao</label>
+                                }
+                                else
+                                {
+                                    <input type="checkbox" disabled />
+                                }
+                            </td>
+                            @*<td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-16">
+                                    <a href="" class="u-border-none u-border-radius-50 u-btn u-button-style u-hover-palette-2-base u-text-hover-palette-3-base u-btn-1" target="_blank">update</a>
+                                </td>*@
+                        </tr>
+                    </tbody>
+                }
+
+            </table>
+        </div>
+        <div class="u-table u-table-responsive u-table-2" style="margin-bottom:20px;">
+            <table class="u-table-entity">
+                <colgroup>
+                    <col width="30.8%">
+                    <col width="69.2%">
+                </colgroup>
+                <tbody class="u-table-body u-table-body-2">
+                    <tr style="height: 46px;">
+                        <td class="u-first-column u-palette-1-light-3 u-table-cell u-table-cell-17">Tổng cộng</td>
+                        
+                        <td class="u-border-1 u-border-palette-1-light-3 u-table-cell">@Model.Sum(t => t.ThanhTien) VND</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

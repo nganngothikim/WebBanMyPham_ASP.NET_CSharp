@@ -1,0 +1,101 @@
+﻿@model IEnumerable<QuanLyMyPham.Models.ChiTietHoaDon>
+<link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+@{
+    var tongsl = Model.Sum(i => i.SoLuong);
+    var tongtt = Model.Sum(i => i.SoLuong * i.SanPham.Gia);
+}
+
+<div class="nav navbar">
+    <div class="dropdown">
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle text-dark" id="a" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <span>@tongsl</span>
+
+            </a>
+            <div style="position:relative;" class="dropdown-menu collapse list-unstyled" aria-labelledby="a">
+                <table class="table table-hover">
+                    <tr>
+                        <th>
+                            Mã SP
+                        </th>
+                        <th>
+                            Tên SP
+                        </th>
+                        <th>
+                            Số lượng
+                        </th>
+                        <th>
+                            Giá
+                        </th>
+
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.MaSP
+                            </td>
+                            <td>
+                                @item.SanPham.TenSP
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SoLuong)
+                            </td>
+                            <td>
+                                @item.SanPham.Gia
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="nav navbar">
+    <div class="dropdown">
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span> @tongsoluong </span> &nbsp;&nbsp;</a>
+        <div class="collapse list-unstyled" id="pageSubmenu">
+            <table class="table table-hover">
+                <tr>
+                    <th>
+                        ID Product
+                    </th>
+                    <th>
+                        Name Product
+                    </th>
+                    <th>
+                        Amount
+                    </th>
+                    <th>
+                        Total
+                    </th>
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.MASP
+                        </td>
+                        <td>
+                            @item.SANPHAM.TENSP
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SOLUONG)
+                        </td>
+                        <td>
+                            @item.SANPHAM.GIABAN đ
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>*@

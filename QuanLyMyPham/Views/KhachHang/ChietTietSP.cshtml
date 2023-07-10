@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "ChietTietSP";
+    Layout = "~/Views/Shared/_LayoutKhachHang.cshtml";
+
+    var nfi = new System.Globalization.NumberFormatInfo { NumberGroupSeparator = "." };
+    var ListSize = new List<SelectListItem>();
+    for (int j = 35; j <= 46; j++)
+    {
+        var y = new SelectListItem
+        {
+            Text = j.ToString(),
+            Value = j.ToString()
+        };
+        ListSize.Add(y);
+    }
+}
+@using QuanLyMyPham.Models;
+@model SanPham
+@{
+    GioHang1 gio = (GioHang1)Session["gh"];
+}
+
+
+<link rel="stylesheet" href="/Content/Detail.css" media="screen">
+
+<section class="u-clearfix u-white u-section-1" id="sec-be03" style="margin-top:100px;">
+    <div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
+        <!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
+        <div class="u-container-style u-expanded-width u-product u-white u-product-1">
+            <div class="u-container-layout u-container-layout-1">
+                <!--product_image-->
+                <img alt="" class="u-image u-image-default u-product-control u-image-1" data-image-width="2000" data-image-height="1333" src="/HinhAnh/@Model.DuongDan"><!--/product_image--><!--product_title-->
+
+                <h4 class="u-custom-font u-product-control u-text u-text-default u-text-font u-text-1" style="margin-left:600px;">
+                    <a class="u-product-title-link" href="#"><!--product_title_content-->@Model.TenSP<!--/product_title_content--></a>
+                </h4><!--/product_title--><!--product_price-->
+
+                <div class="u-product-control u-product-price u-product-price-1" style="margin-left:600px;">
+                    <div class="u-price-wrapper u-spacing-10">
+                        <!--product_old_price-->
+                        <div class="u-price u-text-palette-2-base" style="font-size: 1.875rem; font-weight: 700;"><!--product_regular_price_content-->@Model.Gia.Value.ToString("#,##", nfi) VNĐ<!--/product_regular_price_content--></div><!--/product_regular_price-->
+                    </div>
+                    <span>
+                        <form action="/KhachHang/SuaSoLuong" method="get">
+                            <input type="hidden" name="SanPhamID" value="@Model.MaSP" />
+                            @if (gio != null)
+                            {
+                                foreach (Item i in gio.dssp)
+                                {
+                                    if (Model.MaSP == i.maSP)
+                                    {
+                                        <input type="number" min="1" step="1" name="soluongmoi" value="@i.soLuong" style="width:40px;" />
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        <input type="number" min="1" step="1" name="soluongmoi" value="1" style="width:40px;" />
+                                        break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                <input type="number" min="1" step="1" name="soluongmoi" value="1"  width="30"/>
+                            }
+
+                    </span>
+                    <button type="submit" class="u-btn"> MUA NGAY </button>
+
+
+                    <a href="/KhachHang/ChonMua/@Model.MaSP" class="u-border-2 u-border-grey-75 u-btn u-button-style u-hover-palette-3-dark-1 u-palette-1-base u-product-control u-text-hover-white u-btn-1"><!--product_button_content-->Thêm vào giỏ hàng<!--/product_button_content--></a><!--/product_button--><!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":"Quay lại"}--><!--/options_json-->
+                    <a href="/KhachHang/SanPham" class="u-border-none u-btn u-button-style u-hover-palette-2-base u-palette-1-base u-product-control u-text-hover-palette-3-dark-2 u-btn-2"><!--product_button_content-->Quay lại<!--/product_button_content--></a><!--/product_button-->
+                    </form>
+                </div><!--/product_price-->
+                <p class="u-text u-text-2">@Model.MoTa</p><!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":"Thêm vào giỏ hàng"}--><!--/options_json-->
+            </div>
+        </div><!--/product_item--><!--/product-->
+    </div>
+</section>

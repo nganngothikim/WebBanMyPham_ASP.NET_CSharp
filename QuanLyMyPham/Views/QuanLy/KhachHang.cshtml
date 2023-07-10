@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "KhachHang";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+@using QuanLyMyPham.Models;
+@model List<KhachHang>
+
+<section class="u-align-center u-clearfix u-section-1" id="sec-f22f">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Danh sách khách hàng</h2>
+        @*<a href="/QuanLy/ThemKH" style="margin-left:1015px; margin-top:-40px;" class="u-border-none u-border-radius-50 u-btn u-button-style u-hover-palette-2-base u-text-hover-palette-3-base u-btn-1" target="_blank">Create New</a>*@
+        <div class="u-expanded-width u-table u-table-responsive u-table-1">
+            <table class="u-table-entity u-table-entity-1">
+                <colgroup>
+                    <col width="8.6%">
+                    <col width="30.2%">
+                    <col width="16%">
+                    <col width="34.3%">
+                    <col width="11%">
+                    @*<col width="23.5%">*@
+                </colgroup>
+                <thead class="u-align-center u-palette-1-light-2 u-table-header u-text-palette-3-base u-table-header-1">
+                    <tr style="height: 36px;">
+                        <th class="u-align-center u-border-1 u-border-grey-30 u-table-cell">ID</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-2">Tên khách hàng</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-3">Số điện thoại</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-4">Email</th>
+                        <th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-5">Mật khẩu</th>
+                        @*<th class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-6">Tuỳ chọn</th>*@
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tbody class="u-align-center u-table-body">
+                        <tr style="height: 50px;">
+                            <td class="u-align-center u-border-1 u-border-grey-30 u-first-column u-table-cell">@item.MaKH</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-8">@item.HoTen</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-9">@item.DienThoai</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-10">@item.Email</td>
+                            <td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-11">@item.MatKhau</td>
+                            @*<td class="u-border-1 u-border-grey-30 u-table-cell u-table-cell-12">
+                                <a href="/QuanLy/SuaKH/@item.MaKH" class="u-border-none u-border-radius-50 u-btn u-button-style u-hover-palette-2-base u-text-hover-palette-3-base u-btn-1" target="_blank">update</a>
+                                <a href="/QuanLy/XoaKH/@item.MaKH" class="u-border-none u-border-radius-50 u-btn u-button-style u-hover-palette-2-base u-text-hover-palette-3-base u-btn-1" target="_blank">delete</a>
+                            </td>*@
+                        </tr>
+                    </tbody>
+                }
+
+            </table>
+        </div>
+    </div>
+</section>

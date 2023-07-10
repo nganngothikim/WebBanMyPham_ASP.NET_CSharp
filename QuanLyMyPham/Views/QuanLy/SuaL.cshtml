@@ -1,0 +1,34 @@
+﻿@model QuanLyMyPham.Models.Loai
+
+@{
+    ViewBag.Title = "SuaL";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+<link href="~/Content/nicepage.css" rel="stylesheet" />
+<div class="container">
+    <div class="row u-align-left u-form u-form-1">
+        
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <br />
+            <fieldset>
+
+                <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Chỉnh sửa loại</h2>               
+                @Html.HiddenFor(model => model.MaLoai)
+                <div class="editor-label">
+                    Tên loại
+                </div>
+                <div class="editor-field">
+                    @Html.EditorFor(model => model.TenLoai)
+                    @Html.ValidationMessageFor(model => model.TenLoai)
+                </div>
+
+                <p>
+                    <button class="u-btn u-btn-1" type="submit" value="Delete" style="margin-top:20px;">Sửa</button>
+                </p>
+            </fieldset>
+        }
+    </div>
+</div>

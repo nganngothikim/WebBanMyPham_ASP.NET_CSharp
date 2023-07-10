@@ -1,0 +1,75 @@
+﻿@model QuanLyMyPham.Models.SanPham
+
+@{
+    ViewBag.Title = "XoaSP";
+    Layout = "~/Views/Shared/_LayoutQuanLy.cshtml";
+}
+
+
+<div class="container">
+    <div class="row u-align-left u-form u-form-1">
+        
+        <br />
+        <fieldset>
+
+            <h2 class="u-text u-text-default u-text-palette-1-base u-text-1">Xoá Sản Phẩm</h2>
+
+            <div class="display-label">
+                @*@Html.DisplayNameFor(model => model.TenSP)*@
+                Mã sản phẩm: @Html.DisplayFor(model => model.MaSP)
+            </div>
+            <br />
+            <div class="display-label">
+                @*@Html.DisplayNameFor(model => model.TenSP)*@
+                Tên sản phẩm: @Html.DisplayFor(model => model.TenSP)
+            </div>
+
+            <div class="display-label" style="padding-top:20px;">
+                @*@Html.DisplayNameFor(model => model.DuongDan)*@
+                Hình ảnh:
+            </div>
+            <div class="display-field" style="margin-left:30px;">
+                <img src="/HinhAnh/@Model.DuongDan" width="300" />
+                @*@Html.DisplayFor(model => model.DuongDan)*@
+            </div>
+
+            <div class="display-label" style="padding-top:20px;">
+                @*@Html.DisplayNameFor(model => model.Gia)*@
+                Giá: @Html.DisplayFor(model => model.Gia)
+            </div>
+            <div class="display-field">
+                @*@Html.DisplayFor(model => model.Gia)*@
+            </div>
+
+            <div class="display-label" style="padding-top:20px;">
+                @*@Html.DisplayNameFor(model => model.MoTa)*@
+                Mô tả: @Html.DisplayFor(model => model.MoTa)
+            </div>
+            <div class="display-field">
+                @*@Html.DisplayFor(model => model.MoTa)*@
+
+            </div>
+
+            <div class="display-label" style="padding-top:20px;">
+                @*@Html.DisplayNameFor(model => model.MaLoai)*@
+                Mã loại: @Html.DisplayFor(model => model.MaLoai)
+            </div>
+            <div class="display-field">
+                @*@Html.DisplayFor(model => model.MaLoai)*@
+            </div>
+            <br />
+            <h4>Bạn có chắc chắn muốn xóa?</h4>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <p>
+                    <button class="u-btn u-btn-1" type="submit" value="Delete" style="margin-top:20px;">Xóa</button>
+                </p>
+            }
+        </fieldset>
+
+    </div>
+    
+</div>
+
+

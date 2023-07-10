@@ -1,0 +1,597 @@
+﻿@{
+    ViewBag.Title = "Main";
+}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="New Collection, 2022/2023, ​Mid Season Sale, ​Celebrity Style, Shopping Tips, Outfit Ideas And How-Tos, ​New Arrivals Everyday, ​Final Season Sale, ​Featured Products, 2022/2023, ​Fashionist, ​Featured Products, ​Final Season Sale">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="/Content/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/Content/Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/js/nicepage.js" defer=""></script>
+    @*<meta name="generator" content="Nicepage 5.1.5, nicepage.com">*@
+    <meta name="referrer" content="origin">
+
+    <meta name="theme-color" content="#f38181">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en">
+    <header class="u-clearfix u-header u-sticky u-sticky-833b u-white u-header" id="sec-8d89">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD">
+                <div class="menu-collapse" style="font-size: 1.625rem; font-weight: 600;">
+                    <a class="u-button-style u-custom-text-active-color u-custom-text-color u-nav-link u-text-palette-1-light-1" href="#" style="font-size: calc(1em + 10px); padding: 5px 2px;">
+                        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5c50"></use></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-5c50" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                    </a>
+                </div>
+                <div class="u-custom-menu u-nav-container">
+                    <ul class="u-nav u-unstyled u-nav-1">
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base u-text-palette-3-dark-2" href="/Home/Main" style="padding: 10px 20px;">Home</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base u-text-palette-3-dark-2" href="/KhachHang/SanPham" style="padding: 10px 20px;">Product</a>
+                            <div class="u-nav-popup">
+                                <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
+                                    @*<li class="u-nav-item">
+                                            <a class="u-button-style u-hover-palette-2-base u-nav-link">Son môi</a>
+                                        </li>
+                                        <li class="u-nav-item">
+                                            <a class="u-button-style u-hover-palette-2-base u-nav-link">Sữa rửa mặt</a>
+                                        </li>
+                                        <li class="u-nav-item">
+                                            <a class="u-button-style u-hover-palette-2-base u-nav-link">Dưỡng ẩm</a>
+                                        </li>
+                                        <li class="u-nav-item">
+                                            <a class="u-button-style u-hover-palette-2-base u-nav-link">Kem chống nắng</a>
+                                        </li>
+                                        <li class="u-nav-item">
+                                            <a class="u-button-style u-hover-palette-2-base u-nav-link">Tẩy trang</a>
+                                        </li>*@
+                                    @Html.Action("MenuLoaiSP", "KhachHang")
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base u-text-palette-3-dark-2" href="Home.html#carousel_28a6" style="padding: 10px 20px;">About us</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base u-text-palette-3-dark-2" href="Home.html#sec-735f" style="padding: 10px 20px;">Contact</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <a class="u-button-style u-nav-link u-text-active-palette-1-light-1 u-text-hover-palette-2-base u-text-palette-3-dark-2" href="/TaiKhoan/DangNhap" style="padding: 10px 20px;">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="u-custom-menu u-nav-container-collapse">
+                    <div class="u-align-center u-container-style u-inner-container-layout u-opacity u-opacity-80 u-palette-4-light-2 u-sidenav">
+                        <div class="u-inner-container-layout u-sidenav-overflow">
+                            <div class="u-menu-close"></div>
+                            <ul class="u-align-left u-custom-font u-heading-font u-nav u-popupmenu-items u-text-palette-3-dark-2 u-unstyled u-nav-3">
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" href="/Home/Main">Home</a>
+                                </li>
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" href="/KhachHang/SanPham">Product</a><div class="u-nav-popup">
+                                        <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
+                                            @*<li class="u-nav-item">
+                                                    <a class="u-button-style u-nav-link">Son môi</a>
+                                                </li>
+                                                <li class="u-nav-item">
+                                                    <a class="u-button-style u-nav-link">Sữa rửa mặt</a>
+                                                </li>
+                                                <li class="u-nav-item">
+                                                    <a class="u-button-style u-nav-link">Dưỡng ẩm</a>
+                                                </li>
+                                                <li class="u-nav-item">
+                                                    <a class="u-button-style u-nav-link">Kem chống nắng</a>
+                                                </li>
+                                                <li class="u-nav-item">
+                                                    <a class="u-button-style u-nav-link">Tẩy trang</a>
+                                                </li>*@
+                                            @Html.Action("MenuLoaiSP", "KhachHang")
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" href="Home.html#carousel_28a6">About us</a>
+                                </li>
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" href="Home.html#sec-735f">Contact</a>
+                                </li>
+                                <li class="u-nav-item">
+                                    <a class="u-button-style u-nav-link" href="/TaiKhoan/DangNhap">Sign up</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+                </div>
+            </nav>
+            <a href="/Home/Main" class="u-image u-logo u-image-1" data-image-width="184" data-image-height="62" title="Home">
+                <img src="/Image/logo.png" class="u-logo-image u-logo-image-1">
+            </a> <span class="u-file-icon u-icon u-text-palette-1-base u-icon-1" data-href="/KhachHang/XemGioHang" title="Cart"><img src="/Image/1170678-ad06b1bc.png" alt=""></span>
+        </div>
+    </header>
+    <section class="u-clearfix u-section-1" id="sec-931b">
+        <div id="carousel-bd35" data-interval="1000" data-u-ride="carousel" class="u-carousel u-carousel-duration-750 u-carousel-left u-expanded-width u-slider u-slider-1" data-pause="false">
+            <ol class="u-absolute-hcenter u-carousel-indicators u-hidden u-carousel-indicators-1">
+                <li data-u-target="#carousel-bd35" class="u-active u-grey-30" data-u-slide-to="0"></li>
+                <li data-u-target="#carousel-bd35" class="u-grey-30" data-u-slide-to="1"></li>
+                <li data-u-target="#carousel-bd35" class="u-grey-30" data-u-slide-to="2"></li>
+            </ol>
+            <div class="u-carousel-inner" role="listbox">
+                <div class="u-active u-align-center u-carousel-item u-container-style u-image u-slide u-image-1" data-image-width="3000" data-image-height="2000">
+                    <div class="u-container-layout u-container-layout-1"></div>
+                </div>
+                <div class="u-align-center u-carousel-item u-container-style u-image u-slide u-image-2" data-image-width="2500" data-image-height="1563">
+                    <div class="u-container-layout u-container-layout-2"></div>
+                </div>
+                <div class="u-carousel-item u-container-style u-image u-slide u-image-3" data-image-width="2500" data-image-height="1563">
+                    <div class="u-container-layout u-container-layout-3"></div>
+                </div>
+            </div>
+            <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-hidden-sm u-hidden-xs u-spacing-9 u-text-hover-palette-1-light-2 u-text-white u-carousel-control-1" href="#carousel-bd35" role="button" data-u-slide="prev">
+                <span aria-hidden="true">
+                    <svg viewBox="0 0 256 256">
+                        <g>
+                            <polygon points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128"></polygon>
+                        </g>
+                    </svg>
+                </span>
+                <span class="sr-only">
+                    <svg viewBox="0 0 256 256">
+                        <g>
+                            <polygon points="207.093,30.187 176.907,0 48.907,128 176.907,256 207.093,225.813 109.28,128"></polygon>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+            <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-hidden-sm u-hidden-xs u-spacing-9 u-text-hover-palette-1-light-2 u-text-white u-carousel-control-2" href="#carousel-bd35" role="button" data-u-slide="next">
+                <span aria-hidden="true">
+                    <svg viewBox="0 0 306 306">
+                        <g id="chevron-right">
+                            <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153"></polygon>
+                        </g>
+                    </svg>
+                </span>
+                <span class="sr-only">
+                    <svg viewBox="0 0 306 306">
+                        <g id="chevron-right">
+                            <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153"></polygon>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-2" id="sec-895c">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-align-center u-container-style u-group u-white u-group-1" data-animation-name="customAnimationIn" data-animation-duration="2000">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                    <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-1"> F​eatured Products</h2>
+                    <a href="/KhachHang/SanPham" class="u-border-none u-btn u-button-style u-custom-font u-font-montserrat u-hover-palette-3-light-1 u-palette-1-light-2 u-btn-1">BUY NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-3" id="sec-0ee8">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+                <div class="u-repeater u-repeater-1">
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+                            <img class="u-expanded-width u-image u-image-default u-image-1" src="/Image/card5.png" alt="" data-image-width="1000" data-image-height="1000" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                            <h5 class="u-custom-font u-font-montserrat u-text u-text-default u-text-1"> New Arrivals Everyday</h5>
+                            <p class="u-text u-text-default u-text-palette-3-dark-1 u-text-2">Sản phẩm mới được cập nhật mỗi ngày</p>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+                            <img class="u-expanded-width u-image u-image-default u-image-2" src="/Image/card11.png" alt="" data-image-width="750" data-image-height="937" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                            <h5 class="u-custom-font u-font-montserrat u-text u-text-default u-text-3"> Featured Products</h5>
+                            <p class="u-text u-text-default u-text-palette-3-dark-1 u-text-4">Sản phẩm nổi bật được yêu thích nhất</p>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+                            <img class="u-expanded-width u-image u-image-default u-image-3" src="/Image/card6.png" alt="" data-image-width="1000" data-image-height="667" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                            <h5 class="u-custom-font u-font-montserrat u-text u-text-default u-text-5"> Mid Season Sale</h5>
+                            <p class="u-text u-text-default u-text-palette-3-dark-1 u-text-6">Chương trình ưu đãi hấp dẫn</p>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-list-item u-repeater-item">
+                        <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+                            <img class="u-expanded-width u-image u-image-default u-image-4" src="/Image/card12.png" alt="" data-image-width="1000" data-image-height="1000" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                            <h5 class="u-custom-font u-font-montserrat u-text u-text-default u-text-7"> Final Season Sale</h5>
+                            <p class="u-text u-text-default u-text-palette-3-dark-1 u-text-8">Giảm giá sốc cuối năm với vourcher 30%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-a8fc">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+                <div class="u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-size-30 u-size-60-md">
+                            <div class="u-layout-col">
+                                <div class="u-size-40">
+                                    <div class="u-layout-row">
+                                        <div class="u-align-center u-container-style u-image u-layout-cell u-size-60 u-image-1" data-image-width="500" data-image-height="750">
+                                            <div class="u-container-layout u-container-layout-1">
+                                                <div class="u-align-center u-container-style u-group u-opacity u-opacity-60 u-white u-group-1" data-animation-name="customAnimationIn" data-animation-duration="2000">
+                                                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                                        <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-1">SON MÔI</h2>
+                                                        <a href="/KhachHang/SanPham" class="u-border-none u-btn u-button-style u-custom-font u-font-montserrat u-hover-palette-1-light-2 u-palette-3-base u-btn-1">View More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-size-20">
+                                    <div class="u-layout-row">
+                                        <div class="u-align-center u-container-style u-image u-layout-cell u-size-30 u-image-2" data-image-width="750" data-image-height="1123">
+                                            <div class="u-container-layout u-container-layout-3"></div>
+                                        </div>
+                                        <div class="u-align-center u-container-style u-image u-layout-cell u-size-30 u-image-3" data-image-width="750" data-image-height="1123">
+                                            <div class="u-container-layout u-container-layout-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u-size-30 u-size-60-md">
+                            <div class="u-layout-col">
+                                <div class="u-size-20">
+                                    <div class="u-layout-row">
+                                        <div class="u-align-center u-container-style u-image u-layout-cell u-size-30 u-image-4" data-image-width="750" data-image-height="937">
+                                            <div class="u-container-layout u-container-layout-5"></div>
+                                        </div>
+                                        <div class="u-align-center u-container-style u-image u-layout-cell u-size-30 u-image-5" data-image-width="750" data-image-height="1124">
+                                            <div class="u-container-layout u-valign-middle u-container-layout-6"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-size-40">
+                                    <div class="u-layout-row">
+                                        <div class="u-align-center u-container-style u-image u-layout-cell u-size-60 u-image-6" data-image-width="750" data-image-height="1124">
+                                            <div class="u-container-layout u-valign-middle u-container-layout-7">
+                                                <div class="u-align-center u-container-style u-group u-opacity u-opacity-60 u-white u-group-2" data-animation-name="customAnimationIn" data-animation-duration="2000">
+                                                    <div class="u-container-layout u-valign-middle u-container-layout-8">
+                                                        <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-2">DƯỠNG ẨM</h2>
+                                                        <a href="/KhachHang/SanPham" class="u-border-none u-btn u-button-style u-custom-font u-font-montserrat u-hover-palette-1-light-2 u-palette-3-base u-btn-2">View More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-clearfix u-section-5" id="carousel_fe4d">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+                <div class="u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-size-30 u-size-60-md">
+                            <div class="u-layout-col">
+                                <div class="u-size-40">
+                                    <div class="u-layout-row">
+                                        <div class="u-align-center u-container-style u-image u-layout-cell u-left-cell u-size-60 u-image-1" src="" data-image-width="2500" data-image-height="1125">
+                                            <div class="u-container-layout u-valign-middle-xs u-container-layout-1">
+                                                <div class="u-align-center u-container-style u-group u-opacity u-opacity-60 u-white u-group-1" data-animation-name="customAnimationIn" data-animation-duration="2000">
+                                                    <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                                        <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-1"> TẨY TRANG</h2>
+                                                        <a href="/KhachHang/SanPham" class="u-border-none u-btn u-button-style u-custom-font u-font-montserrat u-hover-palette-1-light-2 u-palette-3-base u-btn-1">View More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-size-20">
+                                    <div class="u-layout-row">
+                                        <div class="u-container-style u-image u-layout-cell u-left-cell u-size-30 u-image-2" src="" data-image-width="750" data-image-height="1124">
+                                            <div class="u-container-layout u-valign-middle u-container-layout-3"></div>
+                                        </div>
+                                        <div class="u-align-left u-container-style u-image u-layout-cell u-size-30 u-image-3" data-image-width="750" data-image-height="1123">
+                                            <div class="u-container-layout u-valign-top-xs u-container-layout-4"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u-size-30 u-size-60-md">
+                            <div class="u-layout-col">
+                                <div class="u-size-20">
+                                    <div class="u-layout-row">
+                                        <div class="u-container-style u-image u-layout-cell u-shape-rectangle u-size-30 u-image-4" data-image-width="750" data-image-height="1124">
+                                            <div class="u-container-layout u-container-layout-5"></div>
+                                        </div>
+                                        <div class="u-container-style u-image u-layout-cell u-right-cell u-size-30 u-image-5" src="" data-image-width="1000" data-image-height="668">
+                                            <div class="u-container-layout u-valign-middle u-container-layout-6"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="u-size-40">
+                                    <div class="u-layout-row">
+                                        <div class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-60 u-image-6" src="" data-image-width="2500" data-image-height="1563">
+                                            <div class="u-container-layout u-container-layout-7">
+                                                <div class="u-align-center u-container-style u-group u-opacity u-opacity-60 u-white u-group-2" data-animation-name="customAnimationIn" data-animation-duration="2000">
+                                                    <div class="u-container-layout u-valign-middle u-container-layout-8">
+                                                        <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-2">CHỐNG NẮNG</h2>
+                                                        <a href="/KhachHang/SanPham" class="u-border-none u-btn u-button-style u-custom-font u-font-montserrat u-hover-palette-1-light-2 u-palette-3-base u-btn-2">View More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-clearfix u-section-6" id="carousel_28a6">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-align-center u-container-style u-expanded-width u-group u-image u-shading u-image-1" data-image-width="2000" data-image-height="1333">
+                <div class="u-container-layout u-container-layout-1">
+                    <h1 class="u-text u-text-font u-text-1">ABOUT US</h1>
+                    <div id="carousel-5989" data-interval="750" data-u-ride="carousel" class="u-carousel u-carousel-duration-500 u-slider u-slider-1">
+                        <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+                            <li data-u-target="#carousel-5989" class="u-active u-grey-30 u-shape-circle" data-u-slide-to="0" style="width: 10px; height: 10px;"></li>
+                            <li data-u-target="#carousel-5989" class="u-grey-30 u-shape-circle" data-u-slide-to="1" style="width: 10px; height: 10px;"></li>
+                            <li data-u-target="#carousel-5989" class="u-grey-30 u-shape-circle" data-u-slide-to="2" style="width: 10px; height: 10px;"></li>
+                        </ol>
+                        <div class="u-carousel-inner" role="listbox">
+                            <div class="u-active u-align-center u-carousel-item u-container-style u-slide u-carousel-item-1">
+                                <div class="u-container-layout u-container-layout-2">
+                                    <span class="u-file-icon u-icon u-icon-circle u-palette-1-base u-text-white u-icon-1"><img src="/Image/681494-3d6f45f5.png" alt=""></span>
+                                    <p class="u-large-text u-text u-text-variant u-text-2">
+                                        LÊ MINH PHÁT&nbsp;<br>LÊ TÂM NHƯ<br>NGÔ THỊ KIM NGÂN
+                                    </p>
+                                    <a href="Home.html#sec-735f" class="u-border-none u-btn u-button-style u-custom-font u-font-montserrat u-hover-palette-1-light-2 u-palette-3-base u-btn-1">CONTACT US</a>
+                                </div>
+                            </div>
+                            <div class="u-align-center u-carousel-item u-container-style u-slide u-carousel-item-2">
+                                <div class="u-container-layout u-container-layout-3">
+                                    <p class="u-large-text u-text u-text-variant u-text-3">
+                                        Chúng tôi đang hành động mỗi ngày.<br>Không chỉ nỗ lực vì làn da của bạn, chúng tôi còn đang hành động nhằm đem lại giá trị làm đẹp bền vững cho môi trường.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="u-align-center u-carousel-item u-container-style u-slide u-carousel-item-3">
+                                <div class="u-container-layout u-container-layout-4">
+                                    <p class="u-large-text u-text u-text-variant u-text-4"> Chúng tôi luôn tìm kiếm những nguyên liệu mà bạn tin tưởng và đảm bảo sự minh bạch trong công thức sản phẩm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-spacing-10 u-carousel-control-1" href="#carousel-5989" role="button" data-u-slide="prev">
+                            <span aria-hidden="true">
+                                <svg viewBox="0 0 451.847 451.847">
+                                    <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
+                                </svg>
+                            </span>
+                            <span class="sr-only">
+                                <svg viewBox="0 0 451.847 451.847">
+                                    <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z"></path>
+                                </svg>
+                            </span>
+                        </a>
+                        <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-spacing-10 u-carousel-control-2" href="#carousel-5989" role="button" data-u-slide="next">
+                            <span aria-hidden="true">
+                                <svg viewBox="0 0 451.846 451.847">
+                                    <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
+                                </svg>
+                            </span>
+                            <span class="sr-only">
+                                <svg viewBox="0 0 451.846 451.847">
+                                    <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-clearfix u-section-7" id="carousel_3eee">
+        <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+            <div class="u-align-center u-container-style u-expanded-width u-group u-image u-shading u-image-1" data-image-width="2500" data-image-height="1667">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                    <h1 class="u-text u-text-palette-2-base u-text-1"> Sign Up And Receive Off 10% Your First Order</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-8" id="sec-735f">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+                <div class="u-gutter-0 u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-palette-2-light-1 u-size-30 u-layout-cell-1">
+                            <div class="u-container-layout u-container-layout-1">
+                                <h6 class="u-text u-text-white u-text-1">Join our newsletter</h6>
+                                <h2 class="u-custom-font u-text u-text-font u-text-palette-3-dark-2 u-text-2">Contact us</h2>
+                                <p class="u-text u-text-white u-text-3">
+                                    Hotline: 0977777777<br>Email: beautymona@gmai.com <br>
+                                </p>
+                                <div class="u-social-icons u-spacing-20 u-social-icons-1">
+                                    <a class="u-social-url" target="_blank" href="">
+                                        <span class="u-icon u-icon-circle u-social-facebook u-social-icon u-text-palette-3-dark-2 u-icon-1">
+                                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xmlns:xlink="#" xlink:href="#svg-98a6"></use></svg>
+                                            <svg x="0px" y="0px" viewBox="0 0 112.2 112.2" style="enable-background:new 0 0 112.2 112.2;" xml:space="preserve" id="svg-98a6" class="u-svg-content"><path d="M56.1,0C25.1,0,0,25.1,0,56.1c0,31,25.1,56.1,56.1,56.1c31,0,56.1-25.1,56.1-56.1C112.2,25.1,87.1,0,56.1,0z M71.6,34.3h-8.2c-1.3,0-3.2,0.7-3.2,3.5v7.6h11.3l-1.3,12.9h-10V95H45V58.3h-7.2V45.4H45v-8.3c0-6,2.8-15.3,15.3-15.3l11.2,0V34.3z "></path></svg>
+                                        </span>
+                                    </a>
+                                    <a class="u-social-url" target="_blank" href="">
+                                        <span class="u-icon u-icon-circle u-social-icon u-social-twitter u-text-palette-3-dark-2 u-icon-2">
+                                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xmlns:xlink="#" xlink:href="#svg-00a3"></use></svg>
+                                            <svg x="0px" y="0px" viewBox="0 0 112.2 112.2" style="enable-background:new 0 0 112.2 112.2;" xml:space="preserve" id="svg-00a3" class="u-svg-content"><path d="M56.1,0C25.1,0,0,25.1,0,56.1s25.1,56.1,56.1,56.1s56.1-25.1,56.1-56.1S87.1,0,56.1,0z M83.8,47.3 c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2c-7.6,0-14.6-2.2-20.6-6c1,0.1,2.1,0.2,3.2,0.2c6.3,0,12.1-2.1,16.7-5.7 c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1c0-0.1,0-0.1,0-0.2 c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14c-0.2-1-0.3-2-0.3-3.1 c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4c2.7-0.3,5.3-1,7.7-2.1 C88.7,43,86.4,45.4,83.8,47.3z"></path></svg>
+                                        </span>
+                                    </a>
+                                    <a class="u-social-url" target="_blank" href="">
+                                        <span class="u-icon u-icon-circle u-social-icon u-social-instagram u-text-palette-3-dark-2 u-icon-3">
+                                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xmlns:xlink="#" xlink:href="#svg-6e97"></use></svg>
+                                            <svg x="0px" y="0px" viewBox="0 0 112.2 112.2" style="enable-background:new 0 0 112.2 112.2;" xml:space="preserve" id="svg-6e97" class="u-svg-content"><path d="M56.1,0C25.1,0,0,25.1,0,56.1c0,31,25.1,56.1,56.1,56.1c31,0,56.1-25.1,56.1-56.1C112.2,25.1,87.1,0,56.1,0z M90.6,73.4c0,9.6-7.8,17.5-17.5,17.5H38.6c-9.6,0-17.5-7.9-17.5-17.6V38.8c0-9.6,7.8-17.5,17.5-17.5h34.5c9.6,0,17.5,7.8,17.5,17.5 V73.4z"></path><path d="M73.1,28.9H38.6c-5.4,0-9.9,4.4-9.9,9.9v34.5c0,5.4,4.4,9.9,9.9,9.9h34.5c5.4,0,9.9-4.4,9.9-9.9V38.8 C83,33.4,78.6,28.9,73.1,28.9z M55.9,74C46,74,38,66,38,56.1c0-9.9,8-17.9,17.9-17.9c9.9,0,17.9,8,17.9,17.9 C73.8,66,65.8,74,55.9,74z M74.3,41.9c-2.3,0-4.2-1.9-4.2-4.2s1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2S76.6,41.9,74.3,41.9z"></path><path d="M55.9,45.8c-5.7,0-10.4,4.6-10.3,10.3c0,5.7,4.6,10.3,10.3,10.3s10.3-4.6,10.3-10.3 C66.2,50.4,61.6,45.8,55.9,45.8z"></path></svg>
+                                        </span>
+                                    </a>
+                                    <a class="u-social-url" target="_blank" href="">
+                                        <span class="u-icon u-icon-circle u-social-google u-social-icon u-text-palette-3-dark-2 u-icon-4">
+                                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2" style=""><use xmlns:xlink="#" xlink:href="#svg-0a36"></use></svg>
+                                            <svg x="0px" y="0px" viewBox="0 0 112.2 112.2" style="enable-background:new 0 0 112.2 112.2;" xml:space="preserve" id="svg-0a36" class="u-svg-content"><path d="M56.1,0C25.1,0,0,25.1,0,56.1s25.1,56.1,56.1,56.1c31,0,56.1-25.1,56.1-56.1S87.1,0,56.1,0z M60.1,73.8 c-5.7,7.4-16.3,9.5-24.9,6.6c-9.1-3-15.8-12.2-15.6-21.9c-0.5-11.9,10-22.9,21.9-23.1c6.1-0.5,12,1.8,16.6,5.7 c-1.9,2.1-3.8,4.1-5.9,6.1c-4.1-2.5-8.9-4.3-13.7-2.7c-7.6,2.2-12.3,11.2-9.4,18.7c2.3,7.8,11.8,12.1,19.3,8.8 c3.9-1.4,6.4-4.9,7.5-8.8c-4.4-0.1-8.8,0-13.3-0.2c0-2.6,0-5.2,0-7.9c7.4,0,14.7,0,22.1,0C65.2,61.8,64.2,68.7,60.1,73.8z M92.3,61.9c-2.2,0-4.4,0-6.6,0c0,2.2,0,4.4,0,6.6c-2.2,0-4.4,0-6.6,0c0-2.2,0-4.4,0-6.6c-2.2,0-4.4,0-6.6,0c0-2.2,0-4.4,0-6.6 c2.2,0,4.4,0,6.6,0c0-2.2,0-4.4,0.1-6.6c2.2,0,4.4,0,6.6,0c0,2.2,0,4.4,0,6.6c2.2,0,4.4,0,6.6,0C92.3,57.5,92.3,59.7,92.3,61.9z"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                                <h2 class="u-text u-text-default u-text-palette-3-base u-text-4">Follow us</h2>
+                            </div>
+                        </div>
+                        <div class="u-align-left u-container-style u-layout-cell u-right-cell u-shape-rectangle u-size-30 u-layout-cell-2">
+                            <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                <div class="u-expanded-width u-form u-form-1">
+                                    <form action="#" class="u-clearfix u-form-spacing-24 u-form-vertical u-inner-form" style="padding: 24px;" source="email" name="form">
+                                        <div class="u-form-group u-form-name u-label-none">
+                                            <label for="name-3b9a" class="u-label">Name</label>
+                                            <input type="text" placeholder="Enter your Name" id="name-3b9a" name="name" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="">
+                                        </div>
+                                        <div class="u-form-email u-form-group u-label-none">
+                                            <label for="email-3b9a" class="u-label">Email</label>
+                                            <input type="email" placeholder="Enter a valid email address" id="email-3b9a" name="email" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2" required="">
+                                        </div>
+                                        <div class="u-form-group u-form-message u-label-none">
+                                            <label for="message-3b9a" class="u-label">Message</label>
+                                            <textarea placeholder="Enter your message" rows="4" cols="50" id="message-3b9a" name="message" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3" required=""></textarea>
+                                        </div>
+                                        <div class="u-align-left u-form-group u-form-submit">
+                                            <a href="#" class="u-border-none u-btn u-btn-submit u-button-style u-hover-palette-3-light-1 u-text-hover-white u-btn-1">Submit</a>
+                                            <input type="submit" value="submit" class="u-form-control-hidden">
+                                        </div>
+                                        <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                                        <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                                        <input type="hidden" value="" name="recaptchaResponse">
+                                        <input type="hidden" name="formServices" value="25efe5b8b97bf3043f6f6684b3fd2046">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="u-clearfix u-footer u-grey-5" id="sec-df09">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
+                <div class="u-gutter-0 u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-align-center-sm u-align-center-xs u-align-left-md u-align-left-xl u-container-style u-layout-cell u-left-cell u-size-20 u-size-30-md u-layout-cell-1">
+                            <div class="u-container-layout u-container-layout-1">
+                                <!--position-->
+                                <div data-position="" class="u-position u-position-1">
+                                    <!--block-->
+                                    <div class="u-block">
+                                        <div class="u-block-container u-clearfix">
+                                            <!--block_header-->
+                                            <h5 class="u-block-header u-text"><!--block_header_content--><!--/block_header_content--></h5><!--/block_header--><!--block_content-->
+                                            <div class="u-block-content u-text u-text-palette-3-dark-1">
+                                                <!--block_content_content--> 140 Lê Trọng Tấn, phường Tây Thạnh, Quận Tân Phú<br>Mon – Fri: 9:00 am – 8:00 pm,<br>Sat – Sun: 9:00 am – 10 pm<!--/block_content_content-->
+                                            </div><!--/block_content-->
+                                        </div>
+                                    </div><!--/block-->
+                                </div><!--/position-->
+                            </div>
+                        </div>
+                        <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-20 u-size-30-md u-layout-cell-2">
+                            <div class="u-container-layout u-valign-middle u-container-layout-2">
+                                <a href="Home.html#sec-931b" class="u-image u-logo u-image-1" data-image-width="184" data-image-height="62" title="Home">
+                                    <img src="/Image/logo.png" class="u-logo-image u-logo-image-1">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="u-align-center-sm u-align-center-xs u-align-left-md u-align-right-lg u-align-right-xl u-container-style u-layout-cell u-right-cell u-size-20 u-size-30-md u-layout-cell-3">
+                            <div class="u-container-layout u-valign-middle u-container-layout-3">
+                                <div class="u-social-icons u-spacing-10 u-social-icons-1">
+                                    <a class="u-social-url" title="facebook" target="_blank" href="">
+                                        <span class="u-icon u-social-facebook u-social-icon u-icon-1">
+                                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="#" xlink:href="#svg-62ef"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-62ef">
+                                                <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
+                                                <path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <a class="u-social-url" title="twitter" target="_blank" href="">
+                                        <span class="u-icon u-social-icon u-social-twitter u-icon-2">
+                                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="#" xlink:href="#svg-dcad"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-dcad">
+                                                <circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle>
+                                                <path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
+            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
+            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
+            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
+            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <a class="u-social-url" title="instagram" target="_blank" href="">
+                                        <span class="u-icon u-social-icon u-social-instagram u-icon-3">
+                                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="#" xlink:href="#svg-06bd"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-06bd">
+                                                <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
+                                                <path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path>
+                                                <path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path>
+                                                <path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
+            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
+            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                    <a class="u-social-url" title="pinterest" target="_blank" href="">
+                                        <span class="u-icon u-social-icon u-social-pinterest u-icon-4">
+                                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="#" xlink:href="#svg-4c81"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-4c81">
+                                                <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
+                                                <path fill="#FFFFFF" d="M61.1,76.9c-4.7-0.3-6.7-2.7-10.3-5c-2,10.7-4.6,20.9-11.9,26.2c-2.2-16.1,3.3-28.2,5.9-41
+            c-4.4-7.5,0.6-22.5,9.9-18.8c11.6,4.6-10,27.8,4.4,30.7C74.2,72,80.3,42.8,71,33.4C57.5,19.6,31.7,33,34.9,52.6
+            c0.8,4.8,5.8,6.2,2,12.9c-8.7-1.9-11.2-8.8-10.9-17.8C26.5,32.8,39.3,22.5,52.2,21c16.3-1.9,31.6,5.9,33.7,21.2
+            C88.2,59.5,78.6,78.2,61.1,76.9z"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

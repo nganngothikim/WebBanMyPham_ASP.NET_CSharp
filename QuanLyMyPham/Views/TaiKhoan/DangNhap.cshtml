@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutKhachHang.cshtml";
+}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Product 1 Title">
+    <meta name="description" content="">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="/Content/nicepage.css" media="screen">
+    <link rel="stylesheet" href="/Content/SignIn.css" media="screen">
+    <script class="u-script" type="text/javascript" src="/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="/js/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 5.1.5, nicepage.com">
+    <meta name="referrer" content="origin">
+
+    <meta name="theme-color" content="#f38181">
+    <meta property="og:title" content="SignIn">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body u-xl-mode" data-lang="en">
+    
+    <section class="u-clearfix u-section-1" id="carousel_f9c5" style="margin-top:100px;">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                <div class="u-layout">
+                    <div class="u-layout-row">
+                        <div class="u-align-center u-container-style u-layout-cell u-shape-rectangle u-size-60 u-layout-cell-1">
+                            <div class="u-container-layout u-container-layout-1">
+                                <h2 class="u-custom-font u-font-montserrat u-text u-text-default u-text-palette-1-light-1 u-text-1">Đăng nhập</h2>
+                                <div class="u-align-left u-form u-form-1">
+                                    <form action="/TaiKhoan/DangNhap" method="post">
+                                        <div class="form-outline mb-4">
+                                            <input type="text" name="name" class="form-control" placeholder="User Name Or Email" />
+                                        </div>
+                                        <!-- Password input -->
+                                        <div class="form-outline mb-4">
+                                            <input type="password" name="password" class="form-control" placeholder="Password" />
+                                        </div>
+
+                                        <div class="u-align-left u-form-group u-form-submit u-label-top">                                           
+                                            <button type="submit" class="u-active-black u-border-none u-btn u-btn-submit u-button-style u-hover-palette-3-light-1 u-palette-1-light-1 u-text-hover-white u-btn-1">Đăng nhập</button>
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                                <p class="u-text u-text-palette-3-dark-2 u-text-2">Bạn chưa có tài khoản?</p>
+                                <p class="u-text u-text-palette-3-dark-2 u-text-3">
+                                    <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="/TaiKhoan/DangKy" target="_blank">Đăng ký</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
